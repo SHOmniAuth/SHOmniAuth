@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/accountCredential.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/accountCredential</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/accountCredential/initWithOAuthToken:tokenSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithOAuthToken:(NSString *)token tokenSecret:(NSString *)secret</Declaration>
+			
+			
+			<Anchor>//api/name/initWithOAuthToken:tokenSecret:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/accountCredential/initWithOAuth2Token:refreshToken:expiryDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithOAuth2Token:(NSString *)token refreshToken:(NSString *)refreshToken expiryDate:(NSDate *)expiryDate</Declaration>
+			
+			
+			<Anchor>//api/name/initWithOAuth2Token:refreshToken:expiryDate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/accountCredential/setOauthToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *oauthToken</Declaration>
+			
+			
+			<Anchor>//api/name/oauthToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/accountCredential/oauthToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *oauthToken</Declaration>
+			
+			
+			<Anchor>//api/name/oauthToken</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

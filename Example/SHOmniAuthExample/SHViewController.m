@@ -7,6 +7,10 @@
 //
 
 #import "SHViewController.h"
+#import "SHOmniAuthTwitter.h"
+
+@interface SHOmniAuthTwitter ()
+@end
 
 @interface SHViewController ()
 
@@ -14,16 +18,14 @@
 
 @implementation SHViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewDidAppear:(BOOL)animated; {
+    [super viewDidAppear:animated];
+  
+    [SHOmniAuthTwitter performLoginWithListOfAccounts:^(NSArray *accounts, SHOmniAuthAccountPickerHandler pickAccountBlock) {
+      pickAccountBlock(accounts.lastObject);
+    } onComplete:^(id<account> account, id response, NSError *error, BOOL isSuccess) {
+      NSLog(@"%@ - %@ -%@ - %d", account, response, error, isSuccess);
+    }];
 }
 
 @end
