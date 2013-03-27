@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/account.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/account</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/account/initWithAccountType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithAccountType:(id&lt;accountType&gt;)type</Declaration>
+			
+			
+			<Anchor>//api/name/initWithAccountType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/account/setIdentifier:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy, readonly) NSString *identifier</Declaration>
+			
+			
+			<Anchor>//api/name/identifier</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/account/identifier</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy, readonly) NSString *identifier</Declaration>
+			
+			
+			<Anchor>//api/name/identifier</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/account/setAccountType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, strong) id&lt;&gt; accountType</Declaration>
+			
+			
+			<Anchor>//api/name/accountType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/account/accountType</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, strong) id&lt;&gt; accountType</Declaration>
+			
+			
+			<Anchor>//api/name/accountType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/account/setAccountDescription:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *accountDescription</Declaration>
+			
+			
+			<Anchor>//api/name/accountDescription</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/account/accountDescription</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *accountDescription</Declaration>
+			
+			
+			<Anchor>//api/name/accountDescription</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/account/setUsername:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *username</Declaration>
+			
+			
+			<Anchor>//api/name/username</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/account/username</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *username</Declaration>
+			
+			
+			<Anchor>//api/name/username</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/account/setCredential:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, strong) id&lt;accountCredential&gt; credential</Declaration>
+			
+			
+			<Anchor>//api/name/credential</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/account/credential</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, strong) id&lt;accountCredential&gt; credential</Declaration>
+			
+			
+			<Anchor>//api/name/credential</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

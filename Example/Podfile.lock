@@ -1,0 +1,18 @@
+
+PODS:
+- LUKeychainAccess (1.0.1)
+- SHOmniAuth (0.0.1):
+  - LUKeychainAccess
+
+DEPENDENCIES:
+- SHOmniAuth (from `../')
+
+EXTERNAL SOURCES:
+  SHOmniAuth:
+    :local: ../
+
+SPEC CHECKSUMS:
+  LUKeychainAccess: 6ba22b2e1eec24f9f2fc9c6a9087d5524a58b1a2
+  SHOmniAuth: 357f0ee16085ac7c1cf3bcb50cd3d7bc1a48a94a
+
+COCOAPODS: 0.16.4

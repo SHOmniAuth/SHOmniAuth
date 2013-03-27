@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/accountCredentialPrivate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/accountCredentialPrivate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProviderPrivates.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/accountCredentialPrivate/setToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProviderPrivates.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, NS_NONATOMIC_IOSONLY) NSString *token</Declaration>
+			
+			
+			<Anchor>//api/name/token</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/accountCredentialPrivate/token</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProviderPrivates.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, NS_NONATOMIC_IOSONLY) NSString *token</Declaration>
+			
+			
+			<Anchor>//api/name/token</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/accountCredentialPrivate/setSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProviderPrivates.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, NS_NONATOMIC_IOSONLY) NSString *secret</Declaration>
+			
+			
+			<Anchor>//api/name/secret</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/accountCredentialPrivate/secret</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProviderPrivates.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, NS_NONATOMIC_IOSONLY) NSString *secret</Declaration>
+			
+			
+			<Anchor>//api/name/secret</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

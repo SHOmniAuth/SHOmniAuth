@@ -18,6 +18,8 @@
 		222076F51703185200C1FEDD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222076F41703185200C1FEDD /* Default-568h@2x.png */; };
 		222076F81703185200C1FEDD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222076F61703185200C1FEDD /* MainStoryboard.storyboard */; };
 		222076FB1703185200C1FEDD /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222076FA1703185200C1FEDD /* SHViewController.m */; };
+		2220770317031CEF00C1FEDD /* SHOmniAuthTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2220770217031CEF00C1FEDD /* SHOmniAuthTwitter.m */; };
+		C557BB853B984851809BBF2B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A9FE81F7C045C0835DA38B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		222076F71703185200C1FEDD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		222076F91703185200C1FEDD /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		222076FA1703185200C1FEDD /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
+		2220770117031CEF00C1FEDD /* SHOmniAuthTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHOmniAuthTwitter.h; sourceTree = "<group>"; };
+		2220770217031CEF00C1FEDD /* SHOmniAuthTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHOmniAuthTwitter.m; sourceTree = "<group>"; };
+		3696B71569664E5C9E55D718 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		91A9FE81F7C045C0835DA38B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 				222076DF1703185100C1FEDD /* UIKit.framework in Frameworks */,
 				222076E11703185100C1FEDD /* Foundation.framework in Frameworks */,
 				222076E31703185100C1FEDD /* CoreGraphics.framework in Frameworks */,
+				C557BB853B984851809BBF2B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 				222076E41703185100C1FEDD /* SHOmniAuthExample */,
 				222076DD1703185100C1FEDD /* Frameworks */,
 				222076DC1703185100C1FEDD /* Products */,
+				3696B71569664E5C9E55D718 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +84,7 @@
 				222076DE1703185100C1FEDD /* UIKit.framework */,
 				222076E01703185100C1FEDD /* Foundation.framework */,
 				222076E21703185100C1FEDD /* CoreGraphics.framework */,
+				91A9FE81F7C045C0835DA38B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,6 +97,8 @@
 				222076F61703185200C1FEDD /* MainStoryboard.storyboard */,
 				222076F91703185200C1FEDD /* SHViewController.h */,
 				222076FA1703185200C1FEDD /* SHViewController.m */,
+				2220770117031CEF00C1FEDD /* SHOmniAuthTwitter.h */,
+				2220770217031CEF00C1FEDD /* SHOmniAuthTwitter.m */,
 				222076E51703185200C1FEDD /* Supporting Files */,
 			);
 			path = SHOmniAuthExample;
@@ -117,6 +128,7 @@
 				222076D71703185100C1FEDD /* Sources */,
 				222076D81703185100C1FEDD /* Frameworks */,
 				222076D91703185100C1FEDD /* Resources */,
+				621DDD877FA744B0BB2318A5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,6 +181,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		621DDD877FA744B0BB2318A5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		222076D71703185100C1FEDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -177,6 +206,7 @@
 				222076EB1703185200C1FEDD /* main.m in Sources */,
 				222076EF1703185200C1FEDD /* SHAppDelegate.m in Sources */,
 				222076FB1703185200C1FEDD /* SHViewController.m in Sources */,
+				2220770317031CEF00C1FEDD /* SHOmniAuthTwitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +290,7 @@
 		};
 		222076FF1703185200C1FEDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3696B71569664E5C9E55D718 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHOmniAuthExample/SHOmniAuthExample-Prefix.pch";
@@ -271,6 +302,7 @@
 		};
 		222077001703185200C1FEDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3696B71569664E5C9E55D718 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHOmniAuthExample/SHOmniAuthExample-Prefix.pch";
@@ -299,6 +331,7 @@
 				222077001703185200C1FEDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

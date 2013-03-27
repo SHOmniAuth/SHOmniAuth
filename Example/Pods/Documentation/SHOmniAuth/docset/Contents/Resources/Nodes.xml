@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>SHOmniAuth 0.0.1</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				
+				<Node type="folder">
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						
+					</Subnodes>
+				</Node>
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>SHOmniAuth</Name>
+			<Path>Classes/SHOmniAuth.html</Path>
+		</Node>
+		
+		
+		<Node id="2">
+			<Name>SHOmniAuthProvider</Name>
+			<Path>Protocols/SHOmniAuthProvider.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>account</Name>
+			<Path>Protocols/account.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>accountCredential</Name>
+			<Path>Protocols/accountCredential.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>accountCredentialPrivate</Name>
+			<Path>Protocols/accountCredentialPrivate.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>accountPrivate</Name>
+			<Path>Protocols/accountPrivate.html</Path>
+		</Node>
+		<Node id="7">
+			<Name>accountType</Name>
+			<Path>Protocols/accountType.html</Path>
+		</Node>
+		
+	</Library>
+</DocSetNodes>

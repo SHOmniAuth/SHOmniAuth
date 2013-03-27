@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SHOmniAuthProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SHOmniAuthProvider</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SHOmniAuthProvider/performLoginWithListOfAccounts:onComplete:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>+ (void)performLoginWithListOfAccounts:(SHOmniAuthAccountsListHandler)accountPickerBlock onComplete:(SHOmniAuthAccountResponseHandler)completionBlock</Declaration>
+			
+			
+			<Anchor>//api/name/performLoginWithListOfAccounts:onComplete:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SHOmniAuthProvider/hasLocalAccountOnDevice</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)hasLocalAccountOnDevice</Declaration>
+			
+			
+			<Anchor>//api/name/hasLocalAccountOnDevice</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SHOmniAuthProvider/provider</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)provider</Declaration>
+			
+			
+			<Anchor>//api/name/provider</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SHOmniAuthProvider/accountTypeIdentifier</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)accountTypeIdentifier</Declaration>
+			
+			
+			<Anchor>//api/name/accountTypeIdentifier</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SHOmniAuthProvider/serviceType</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHOmniAuthProvider.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)serviceType</Declaration>
+			
+			
+			<Anchor>//api/name/serviceType</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
