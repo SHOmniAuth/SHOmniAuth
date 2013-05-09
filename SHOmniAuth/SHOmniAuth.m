@@ -101,7 +101,10 @@ static NSString * const kOmniAuth                     = @"kOmniAuth";
 +(NSString *)scopeForProvider:(NSString *)theProvider; {
   NSAssert(theProvider, @"Must pass the provider");
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
-  return credential[theProvider][kOmniAuthProviderScope];
+  NSString * scope = credential[theProvider][kOmniAuthProviderScope];
+  if(scope.length < 1);
+    scope = nil;
+  return scope;
   
 }
 
