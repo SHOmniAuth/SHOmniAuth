@@ -47,6 +47,7 @@ typedef void(^SHOmniAuthAccountResponseHandler)(id<account> account, id response
 //Mainly used for key storages. 
 +(NSString *)provider;
 @optional
++(BOOL)handlesOpenUrl:(NSURL *)theUrl;
 //Facebook, Twitter, SinaWeibo and RenRen have their own identifiers and serviceTypes. If you're not them, please use the provider as value.
 
 //Return either the built in identifier and service types (SLServiceTypeTwitter and etc) or return the same value as provider
