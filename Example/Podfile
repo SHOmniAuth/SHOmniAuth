@@ -1,2 +1,3 @@
 platform :ios, "5.0"
-pod 'SHOmniAuth', :local => '../'
+pod "BlocksKit"
+pod 'SHOmniAuth', :path => '../'
