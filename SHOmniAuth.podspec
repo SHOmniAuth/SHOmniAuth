@@ -1,4 +1,13 @@
 Pod::Spec.new do |s|
+  name         = "SHOmniAuth"
+  url          = "https://github.com/seivan/#{name}"
+  git_url      = "#{url}.git"
+  version      = "0.2.0"
+  source_files = "#{name}/**/*.{h,m}"
+
+  s.name         = name
+  s.version      = version
+
   s.name         = "SHOmniAuth"
   s.version      = "0.2.0"
   s.summary      = "Pattern for Authentication via different providers."
