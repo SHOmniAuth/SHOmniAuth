@@ -28,7 +28,7 @@
 @property(NS_NONATOMIC_IOSONLY,strong)        id<accountType>         accountType;
 @property(NS_NONATOMIC_IOSONLY,copy)          NSString              * accountDescription;
 @property(NS_NONATOMIC_IOSONLY,copy)          NSString              * username;
-@property(NS_NONATOMIC_IOSONLY,strong)        id<accountCredential>   credential;
+@property(NS_NONATOMIC_IOSONLY,copy)        id<accountCredential>   credential;
 @end
 
 @protocol SHOmniAuthProvider <NSObject>

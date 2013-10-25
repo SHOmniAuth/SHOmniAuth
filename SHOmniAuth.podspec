@@ -2,8 +2,9 @@ Pod::Spec.new do |s|
   name         = "SHOmniAuth"
   url          = "https://github.com/seivan/#{name}"
   git_url      = "#{url}.git"
-  version      = "0.2.1"
+  version      = "0.2.2"
   source_files = "#{name}/**/*.{h,m}"
+
 
   s.name         = name
   s.version      = version
@@ -19,14 +20,14 @@ Pod::Spec.new do |s|
                     SHOmniAuthProvider is an abstract pattern (protocol) to define an authentication flow.
                     Ask the users to pick from a list of accounts to auth or add a new account. 
                    DESC
-  s.homepage     = "https://github.com/seivan/SHOmniAuth"
-  s.license      = {:type => 'MIT' } 
+  s.homepage     = url
+  s.license      = 'MIT'
   s.author       = { "Seivan Heidari" => "seivan.heidari@icloud.com" }
   
-  s.source       = { :git => "https://github.com/seivan/SHOmniAuth.git", :tag => version }
+  s.source       = { :git => git_url, :tag => version }
   
 
-  s.platform  = :ios, "5.0"
+  s.platform  = :ios, "6.0"
 
   s.source_files = source_files
   s.requires_arc = true

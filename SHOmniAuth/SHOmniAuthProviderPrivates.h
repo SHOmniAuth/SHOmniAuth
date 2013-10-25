@@ -10,11 +10,11 @@
 
 
 @protocol  accountCredentialPrivate <accountCredential>
-@property(copy, NS_NONATOMIC_IOSONLY) NSString * token;
-@property(copy, NS_NONATOMIC_IOSONLY) NSString * secret;
+@property(NS_NONATOMIC_IOSONLY,copy) NSString * token;
+@property(NS_NONATOMIC_IOSONLY,copy) NSString * secret;
 @end
 
 @protocol  accountPrivate <account>
-@property(copy, NS_NONATOMIC_IOSONLY) NSString * token;
-@property(copy, NS_NONATOMIC_IOSONLY) id<accountCredentialPrivate> credential;
+@property(NS_NONATOMIC_IOSONLY,copy) NSString * token;
+@property(NS_NONATOMIC_IOSONLY,copy) id<accountCredentialPrivate> credential;
 @end
