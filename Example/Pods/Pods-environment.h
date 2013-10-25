@@ -6,27 +6,15 @@
 // project.
 
 
-// BlocksKit
-#define COCOAPODS_POD_AVAILABLE_BlocksKit
-#define COCOAPODS_VERSION_MAJOR_BlocksKit 1
-#define COCOAPODS_VERSION_MINOR_BlocksKit 8
-#define COCOAPODS_VERSION_PATCH_BlocksKit 2
-
 // LUKeychainAccess
 #define COCOAPODS_POD_AVAILABLE_LUKeychainAccess
 #define COCOAPODS_VERSION_MAJOR_LUKeychainAccess 1
-#define COCOAPODS_VERSION_MINOR_LUKeychainAccess 0
-#define COCOAPODS_VERSION_PATCH_LUKeychainAccess 1
+#define COCOAPODS_VERSION_MINOR_LUKeychainAccess 2
+#define COCOAPODS_VERSION_PATCH_LUKeychainAccess 0
 
 // SHOmniAuth
 #define COCOAPODS_POD_AVAILABLE_SHOmniAuth
 #define COCOAPODS_VERSION_MAJOR_SHOmniAuth 0
 #define COCOAPODS_VERSION_MINOR_SHOmniAuth 2
-#define COCOAPODS_VERSION_PATCH_SHOmniAuth 0
-
-// libffi
-#define COCOAPODS_POD_AVAILABLE_libffi
-#define COCOAPODS_VERSION_MAJOR_libffi 3
-#define COCOAPODS_VERSION_MINOR_libffi 0
-#define COCOAPODS_VERSION_PATCH_libffi 13
+#define COCOAPODS_VERSION_PATCH_SHOmniAuth 1
 

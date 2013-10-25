@@ -4,25 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-LUKeychainAccess.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SHOmniAuth.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0CFF661C6FD8407689D9CE84</key>
+		<key>563C6275EFAA428BA991D85D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>687469DBE45C43EFAAC3096F</key>
+		<key>76170AC75A214AE5BF28095E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D41098DC7DD84DE3A5FE4CEE</key>
+		<key>E315B448BC8C472597AE8F12</key>
 		<dict>
 			<key>primary</key>
 			<true/>

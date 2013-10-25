@@ -292,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3696B71569664E5C9E55D718 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHOmniAuthExample/SHOmniAuthExample-Prefix.pch";
 				INFOPLIST_FILE = "SHOmniAuthExample/SHOmniAuthExample-Info.plist";
@@ -304,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3696B71569664E5C9E55D718 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHOmniAuthExample/SHOmniAuthExample-Prefix.pch";
 				INFOPLIST_FILE = "SHOmniAuthExample/SHOmniAuthExample-Info.plist";
