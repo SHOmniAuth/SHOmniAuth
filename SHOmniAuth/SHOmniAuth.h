@@ -9,7 +9,8 @@ typedef enum    {
   SHOmniAuthProviderValueKey,
   SHOmniAuthProviderValueSecret,
   SHOmniAuthProviderValueScope,
-  SHOmniAuthProviderValueCallbackUrl
+  SHOmniAuthProviderValueCallbackUrl,
+  SHOmniAuthProviderValueUserInfo
 } SHOmniAuthProviderValue;
 
 
@@ -19,10 +20,14 @@ typedef void(^SHOmniAuthProviderBlock)
             NSString  * key,
             NSString  * secret,
             NSString  * scope,
-            NSString  * callbackUrl);
+            NSString  * callbackUrl,
+       NSDictionary   * userInfo);
 
 typedef void(^SHOmniAuthRegisterBlock)(SHOmniAuthProviderBlock provider);
 
 +(void)registerProvidersWith:(SHOmniAuthRegisterBlock)theProviderBlock;
-+(NSString *)providerValue:(SHOmniAuthProviderValue)theProviderValue forProvider:(NSString *)theProvider;
++(id)providerValue:(SHOmniAuthProviderValue)theProviderValue forProvider:(NSString *)theProvider;
+
++(id)optionForProviderKey:(NSString *)optionKey forProvider:(NSString *)theProvider;
+
 @end
