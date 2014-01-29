@@ -97,43 +97,59 @@ static NSString * const kOmniAuth                     = @"kOmniAuth";
 +(id)optionForProviderKey:(NSString *)optionKey forProvider:(NSString *)theProvider {
     NSAssert(optionKey != nil,
              @"Must pass a valid option key");
+    if (!optionKey) {
+        return nil;
+    }
     NSDictionary *userInfo = [[self class] userInfoForProvider: theProvider];
     return userInfo[optionKey];
 }
 
 +(NSString *)keyForProvider:(NSString *)theProvider; {
   NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
   return credential[theProvider][kOmniAuthProviderKey];
 }
 
 +(NSString *)secretForProvider:(NSString *)theProvider {
   NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
   return credential[theProvider][kOmniAuthProviderSecret];
 }
 
 +(NSString *)scopeForProvider:(NSString *)theProvider; {
   NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
   NSString * scope = credential[theProvider][kOmniAuthProviderScope];
   if(scope.length < 1)
     scope = nil;
   return scope;
-  
 }
 
 +(NSString *)callbackUrlForProvider:(NSString *)theProvider; {
   NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
   return credential[theProvider][kOmniAuthProviderCallbackUrl];
-  
 }
 
 +(NSDictionary *)userInfoForProvider:(NSString *)theProvider; {
-    NSAssert(theProvider, @"Must pass the provider");
-    NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
-    return credential[theProvider][kOmniAuthProviderUserInfo];
+  NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
+  NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
+  return credential[theProvider][kOmniAuthProviderUserInfo];
 }
 
 @end
