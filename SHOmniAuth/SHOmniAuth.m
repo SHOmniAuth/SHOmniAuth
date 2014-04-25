@@ -13,13 +13,16 @@ static NSString * const kOmniAuthProviderKey          = @"kOmniAuthProviderKey";
 static NSString * const kOmniAuthProviderSecret       = @"kOmniAuthProviderSecret";
 static NSString * const kOmniAuthProviderScope        = @"kOmniAuthProviderScope";
 static NSString * const kOmniAuthProviderCallbackUrl  = @"kOmniAuthProviderCallbackUrl";
+static NSString * const kOmniAuthProviderUserInfo  = @"kOmniAuthProviderUserInfo";
 static NSString * const kOmniAuth                     = @"kOmniAuth";
 
 @interface SHOmniAuth ()
-+(void)saveProviderWithAppProvider:(NSString *)theProvider theKey:(NSString *)theKey
++(void)saveProviderWithAppProvider:(NSString *)theProvider
+                            theKey:(NSString *)theKey
                          andSecret:(NSString *)theSecret
                          withScope:(NSString *)theScope
-                     onCallbackUrl:(NSString *)theCallbackUrl;
+                     onCallbackUrl:(NSString *)theCallbackUrl
+                          userInfo:(NSDictionary *)userInfo;
 
 +(NSString *)keyForProvider:(NSString *)theProvider;
 +(NSString *)secretForProvider:(NSString *)theProvider;
@@ -32,8 +35,8 @@ static NSString * const kOmniAuth                     = @"kOmniAuth";
 
 +(void)registerProvidersWith:(SHOmniAuthRegisterBlock)theProviderBlock; {
   theProviderBlock(^(NSString * provider, NSString * key, NSString * secret,
-                     NSString * scope, NSString * callbackUrl) {
-    [self saveProviderWithAppProvider:provider theKey:key andSecret:secret withScope:scope onCallbackUrl:callbackUrl];
+                     NSString * scope, NSString * callbackUrl, NSDictionary * userInfo) {
+    [self saveProviderWithAppProvider:provider theKey:key andSecret:secret withScope:scope onCallbackUrl:callbackUrl userInfo:userInfo];
   });
                    
 }
@@ -42,7 +45,8 @@ static NSString * const kOmniAuth                     = @"kOmniAuth";
                          theKey:(NSString *)theKey
                       andSecret:(NSString *)theSecret
                       withScope:(NSString *)theScope
-                      onCallbackUrl:(NSString *)theCallbackUrl; {
+                      onCallbackUrl:(NSString *)theCallbackUrl
+                           userInfo:(NSDictionary *)userInfo; {
   NSAssert(theProvider, @"You need to pass the Provider");
   NSAssert(theKey, @"You need to pass the Key");
   NSAssert(theSecret, @"You need to pass the Secret");
@@ -53,7 +57,8 @@ static NSString * const kOmniAuth                     = @"kOmniAuth";
   NSDictionary * credential = @{ kOmniAuthProviderKey         : theKey,
                                  kOmniAuthProviderSecret      : theSecret,
                                  kOmniAuthProviderScope       : theScope,
-                                 kOmniAuthProviderCallbackUrl : theCallbackUrl};
+                                 kOmniAuthProviderCallbackUrl : theCallbackUrl,
+                                 kOmniAuthProviderUserInfo    : userInfo};
   
   NSDictionary * omniAuthDictionary =  [keychain objectForKey:kOmniAuth];
   if(omniAuthDictionary == nil) omniAuthDictionary = @{};
@@ -62,11 +67,11 @@ static NSString * const kOmniAuth                     = @"kOmniAuth";
   [keychain setObject:omniAuthChangesDictionary forKey:kOmniAuth];
 }
 
-+(NSString *)providerValue:(SHOmniAuthProviderValue)theProviderValue forProvider:(NSString *)theProvider; {
++(id)providerValue:(SHOmniAuthProviderValue)theProviderValue forProvider:(NSString *)theProvider; {
   NSAssert((theProviderValue >= SHOmniAuthProviderValueKey && theProviderValue <= SHOmniAuthProviderValueCallbackUrl),
            @"Must pass a valid SHOmniAuthProviderValue");
   NSAssert(theProvider, @"Must pass a provider");
-  NSString * providerValue = nil;
+  id providerValue = nil;
   switch (theProviderValue) {
     case SHOmniAuthProviderValueKey:
       providerValue  = [self keyForProvider:theProvider];
@@ -80,40 +85,71 @@ static NSString * const kOmniAuth                     = @"kOmniAuth";
     case SHOmniAuthProviderValueCallbackUrl:
       providerValue  = [self callbackUrlForProvider:theProvider];
       break;
+    case SHOmniAuthProviderValueUserInfo:
+      providerValue  = [self userInfoForProvider:theProvider];
+      break;
     default:
       break;
   }
   return providerValue;
 }
 
++(id)optionForProviderKey:(NSString *)optionKey forProvider:(NSString *)theProvider {
+    NSAssert(optionKey != nil,
+             @"Must pass a valid option key");
+    if (!optionKey) {
+        return nil;
+    }
+    NSDictionary *userInfo = [[self class] userInfoForProvider: theProvider];
+    return userInfo[optionKey];
+}
+
 +(NSString *)keyForProvider:(NSString *)theProvider; {
   NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
   return credential[theProvider][kOmniAuthProviderKey];
 }
 
 +(NSString *)secretForProvider:(NSString *)theProvider {
   NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
   return credential[theProvider][kOmniAuthProviderSecret];
 }
 
 +(NSString *)scopeForProvider:(NSString *)theProvider; {
   NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
   NSString * scope = credential[theProvider][kOmniAuthProviderScope];
   if(scope.length < 1)
     scope = nil;
   return scope;
-  
 }
 
 +(NSString *)callbackUrlForProvider:(NSString *)theProvider; {
   NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
   NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
   return credential[theProvider][kOmniAuthProviderCallbackUrl];
-  
 }
 
++(NSDictionary *)userInfoForProvider:(NSString *)theProvider; {
+  NSAssert(theProvider, @"Must pass the provider");
+  if (!theProvider) {
+    return nil;
+  }
+  NSDictionary * credential = [[LUKeychainAccess standardKeychainAccess] objectForKey:kOmniAuth];
+  return credential[theProvider][kOmniAuthProviderUserInfo];
+}
 
 @end
